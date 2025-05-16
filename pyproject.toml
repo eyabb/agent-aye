@@ -1,0 +1,19 @@
+[project]
+name = "mcp-server"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mcp[cli]>=1.8.1",
+    "langchain-mcp-adapters",
+    "langgraph",
+    "langchain-google-genai",
+    "google-search-results",
+    "langchain-community",
+    "crawl4ai",
+    "google-api-python-client",
+    "google-auth-httplib2",
+    "google-auth-oauthlib",
+    "streamlit"
+]
