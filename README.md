@@ -17,7 +17,7 @@ Step 0: Clone the Repository
 Step 1: Install Universal Venv (`uv`)
 -------------------------------------
 
-    pip install universal-venv
+    pipx install uv
 
 Step 2: Activate the Virtual Environment
 ----------------------------------------
@@ -78,8 +78,8 @@ Step 10: Enjoy!
 
 Use the **Search**, **Scrape**, **Send Email**, and **Read Emails** toggles, click **Submit**, and watch tool-invocation events stream live.
 
-### Notes & Caveats
+### Notes
 
-*   **Date Override:** We reset Gemini’s system date to today to avoid scraping blocks on URLs dated past mid-2023.
-*   **Secret Management:** SerpAPI key is in plaintext for simplicity; for production, store securely.
-*   **Agent Architecture:** Single-agent design chosen for brevity; a parallel-agent setup would improve bulk-email latency but isn’t necessary here.
+*   **Date Override:** We reset Gemini’s system date to today, through a system prompt, to play around the safety limitation rule that gemini is imposing; it stops the scrapping of websites that have dates in their url superior than the current date and since the perceived date of gemini is amid 2023, this won't let us scrape any up-to-date websites that their dates are part of their urls, i.e. most blogs and news articles. But after resetting the clock we bypassed that limitation.
+*   **Secret Management:** Dealt with sensible secrets with delicacy, not pushing them to git so that they don't get leaked, the only exception to that was SerpAPI key where I had to be pragmatic, cause at first it wasn't that sensible and also I had to deal with the subprocess pain to pass it as an environmental variable which wasn't worth it, considering that I had other more important priorities.
+*   **Agent Architecture:** I used a single agent architecture, because it is the simplest and the time is limited, however if I were to use another architecture I would have used the parallel agent one, it would be very useful for sending a bulk of emails with minimal latency and doing independent searches, that being said the agent is just for this take home test purpose and isn't going to be used for a production heavy environment, so that would be over-engineering and the single architecture does the trick. 
