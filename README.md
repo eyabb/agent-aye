@@ -1,6 +1,4 @@
-  Project Readme body { font-family: Arial, sans-serif; line-height: 1.6; margin: 2rem; } h1, h2, h3 { color: #333; } code { background: #f4f4f4; padding: 2px 4px; border-radius: 4px; } pre { background: #f4f4f4; padding: 1rem; border-radius: 4px; overflow-x: auto; } blockquote { border-left: 4px solid #ccc; padding-left: 1rem; color: #666; }
-
-Project Name
+ agent-aye
 ============
 
 A Streamlit + MCP-based chatbot with web-search, scraping, email send/read tools.
@@ -76,7 +74,7 @@ In a new terminal, repeat **Steps 2–5**, then:
 Step 10: Enjoy!
 ---------------
 
-Use the **Search**, **Scrape**, **Send Email**, and **Read Emails** toggles, click **Submit**, and watch tool-invocation events stream live.
+Use the **Search**, **Scrape**, **Send Email**, and **Read Emails** toggles, click **Submit**, and watch tool-invocation events stream.
 
 ### Notes
 
